@@ -57,6 +57,20 @@ body{
     margin-bottom: 1rem;
 }
 
+.login-button button {
+    border: none;
+    background-color: #6c63ff; /* Cor roxa original */
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff; /* Texto branco */
+}
+
 /* --- RESOLVE O PROBLEMA DAS 3 COLUNAS NO PC (Source 3) --- */
 .input-group {
     display: flex;
@@ -79,15 +93,26 @@ body{
     box-shadow: 1px 1px 6px #0000001c;
 }
 
-.continue-button button{
+.continue-button {
+    display: flex;
+    justify-content: flex-end; /* Empurra o botão para a direita como na foto 1 */
     width: 100%;
     margin-top: 2rem;
+}
+
+.continue-button button {
     border: none;
     background-color: #6b63ff;
-    padding: 0.62rem;
+    padding: 0.62rem 2rem; /* Aumentamos o padding lateral em vez de usar width 100% */
     border-radius: 5px;
-    color: #fff;
     cursor: pointer;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
 }
 
 /* --- CONFIGURAÇÃO PARA TABLET / TELAS MÉDIAS --- */
