@@ -95,14 +95,14 @@ body{
     border-radius: 10px;
 }
 
-.input-group{
+.input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 0;
 }
 
-.input-box{
+.input-box {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
@@ -154,29 +154,38 @@ body{
     color: #fff;
 }
 
+/* --- CONFIGURAÇÃO PARA TABLET --- */
 @media screen and (max-width: 750px) {
     .form-image {
-        display: none; /* Esconde a imagem lateral como planejado [1] */
+        display: none; /* Isso vai sumir com a parte amarela */
     }
     .container {
-        width: 80%; /* Aumenta a largura do container no tablet */
+        width: 85%; /* Aumenta o formulário na tela */
     }
     .form {
         width: 100%;
     }
 }
-@media  screem and (max-width: 480px) {   /* Ajuste para celulares */
-    .container{
-        width: 95%;
-        height: auto; 
-         body {
-        height: auto;
-        padding: 2rem 0; /* Dá um respiro nas bordas superior e inferior */
-     }
-    }
+@media screen and (max-width: 480px) {
+    
     .input-group {
-        flex-direction: column;
-        max-height: none; 
-        overflow-y: visible;
+        /* No celular, não queremos que eles tentem ficar lado a lado */
+        flex-direction: column; 
+    }
+
+    .input-box {
+        /* No celular, cada campo deve ocupar 100% da largura disponível */
+        width: 100%; 
+    }
+    
+    .container {
+        /* Isso resolve o "vão" roxo, fazendo o formulário ocupar a tela toda */
+        width: 95%;
+        height: auto;
+    }
+    
+    .form-image {
+        /* Esconde a imagem amarela para o formulário ter espaço */
+        display: none;
     }
 }
