@@ -156,26 +156,27 @@ body{
 
 @media screen and (max-width: 750px) {
     .form-image {
-        display: none;
+        display: none; /* Esconde a imagem lateral como planejado [1] */
+    }
+    .container {
+        width: 70%; /* Aumenta a largura do container no tablet */
+    }
+    .form {
+        width: 100%;
     }
 }
-.container{
-    width: 50%;
-}
-
-.form{
-    width: 100%;
-}
-
-@media  screem and (max-width: 650px) {
+@media  screem and (max-width: 650px) {   /* Ajuste para celulares */
     .container{
-        width:90%;
+        width: 90%;
+        height: auto; 
+         body {
         height: auto;
+        padding: 2rem 0; /* Dá um respiro nas bordas superior e inferior */
+     }
     }
-    .input-group{
+    .input-group {
         flex-direction: column;
-        overflow-y: scroll;
-        flex-wrap: nowrap;
-        max-height: 10vh;
+        max-height: none; 
+        overflow-y: visible;
     }
 }
