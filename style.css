@@ -101,7 +101,7 @@ body {
     flex-direction: column;
     margin-bottom: 1.1rem;
     /* Força 2 colunas no desktop, impedindo a expansão para 3 */
-    width: 48%; 
+    width: 100%; 
 }
 
 .input-box input {
