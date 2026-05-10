@@ -1,32 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'inter', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
-body {
+body{
     width: 100%;
-    /* Mudança vital: min-height permite que o fundo acompanhe o conteúdo se ele crescer */
-    min-height: 100vh; 
+    min-height: 100vh; /* Permite que o fundo cresça se necessário */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #7B68EE;
+    padding: 20px;
 }
 
-.container {
+.container{
     width: 80%;
-    /* No PC mantemos a altura fixa para o design ficar centralizado */
-    height: 80vh; 
+    height: 80vh; /* No PC mantemos 80% da altura da tela */
     display: flex;
     box-shadow: 5px 5px 10px rgba(0,0,0, .212);
     background-color: #fff;
 }
 
-.form-image {
+.form-image{
     width: 50%;
     display: flex;
     justify-content: center;
@@ -35,12 +34,12 @@ body {
     padding: 1rem;
 }
 
-.form-image img {
+.form-image img{
     width: 100%;
     max-width: 31rem;
 }
 
-.form {
+.form{
     width: 50%;
     display: flex;
     justify-content: center;
@@ -50,49 +49,19 @@ body {
     padding: 3rem;
 }
 
-.form-header {
+.form-header{
     width: 100%;
-    margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
-.title {
-    position: relative;
-}
-
-.form-header h1::after {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 0.3rem;
-    background-color: #6b63ff;
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 10px;
-}
-
-.login-button button {
-    border: none;
-    background-color: #6c63ff;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-button button a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff;
-}
-
-/* --- ESTA PARTE RESOLVE O PROBLEMA DO PC [1] --- */
+/* --- RESOLVE O PROBLEMA DAS 3 COLUNAS NO PC (Source 3) --- */
 .input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem 0;
     width: 100%;
 }
 
@@ -100,79 +69,53 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
-    /* Força 2 colunas no desktop, impedindo a expansão para 3 */
-    width: 100%; 
+    width: 48%; /* FORÇA 2 COLUNAS NO PC */
 }
 
-.input-box input {
+.input-box input{
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
     box-shadow: 1px 1px 6px #0000001c;
 }
 
-.input-box input:focus-visible {
-    outline: 1px solid #6b63ff;
-}
-
-.input-box label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #000000be;
-}
-
-.continue-button button {
+.continue-button button{
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     border: none;
     background-color: #6b63ff;
     padding: 0.62rem;
     border-radius: 5px;
+    color: #fff;
     cursor: pointer;
 }
 
-.continue-button button a {
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff;
-}
-
-/* --- CONFIGURAÇÃO PARA TABLET --- */
-@media screen and (max-width: 1000px) {
+/* --- CONFIGURAÇÃO PARA TABLET / TELAS MÉDIAS --- */
+@media screen and (max-width: 1060px) {
     .form-image {
-        display: none;
+        display: none; /* Some a imagem para dar espaço */
     }
     .container {
-        width: 80%;
-        height: auto;
+        width: 70%;
+        height: auto; /* Para de esmagar o conteúdo */
     }
     .form {
         width: 100%;
     }
 }
 
-/* --- CONFIGURAÇÃO PARA CELULAR [2] --- */
+/* --- RESOLVE O PROBLEMA DO CELULAR (Source 6) --- */
 @media screen and (max-width: 480px) {
-    body {
-        padding: 40px 0; /* Espaço para não grudar no topo do celular */
-    }
-
     .container {
-        width: 90%;
-        height: auto; /* Remove a altura fixa de 80vh para não "espremer" */
+        width: 100%;
+        height: auto;
     }
-
+    
     .form {
         padding: 2rem;
     }
 
     .input-box {
-        width: 100%; /* No celular, os campos ficam um abaixo do outro */
-    }
-
-    .form-header h1::after {
-        position: static;
-        margin-top: 5px;
+        width: 100%; /* FORÇA 1 COLUNA NO CELULAR */
     }
 }
