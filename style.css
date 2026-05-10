@@ -154,7 +154,7 @@ body{
     color: #fff;
 }
 
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 750px) {
     .form-image {
         display: none;
     }
@@ -167,7 +167,7 @@ body{
     width: 100%;
 }
 
-@media  screem and (max-width: 1064px) {
+@media  screem and (max-width: 650px) {
     .container{
         width:90%;
         height: auto;
