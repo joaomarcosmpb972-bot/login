@@ -159,15 +159,15 @@ body{
         display: none; /* Esconde a imagem lateral como planejado [1] */
     }
     .container {
-        width: 70%; /* Aumenta a largura do container no tablet */
+        width: 80%; /* Aumenta a largura do container no tablet */
     }
     .form {
         width: 100%;
     }
 }
-@media  screem and (max-width: 650px) {   /* Ajuste para celulares */
+@media  screem and (max-width: 480px) {   /* Ajuste para celulares */
     .container{
-        width: 90%;
+        width: 95%;
         height: auto; 
          body {
         height: auto;
